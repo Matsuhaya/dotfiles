@@ -28,6 +28,13 @@ link_to_homedir() {
       fi
       command ln -snf $f $HOME
     done
+
+    # Todo: delete directly or symboliclink 
+    echo "fish系"
+    command ln -snf ~/dotfiles/fish ~/.config/fish
+
+    echo "fishパッケージマネージャーfisherで管理されているもの"
+    command ln -snf ~/dotfiles/fisher ~/.config/fisher
     
   else
     command echo "same install src dest"

@@ -23,6 +23,12 @@
 !/.screenrc
 !/.screen/
 !/.tmux.conf
+# fish
+!/fish
+fish/.DS_Store
+fish/functions/.DS_Store
+!/fisher
+fisher/.DS_Store
 # etc
 !/.gdbinit
 !/README.md
