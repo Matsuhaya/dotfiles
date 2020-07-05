@@ -27,20 +27,9 @@ link_to_homedir() {
       command ln -snf $f $HOME
     done
 
-    # fish系
-    # Todo: delete directly or symboliclink 
-    echo "fish系"
-    command ln -snf ~/dotfiles/fish ~/.config/fish
-
-    echo "fishパッケージマネージャーfisherで管理されているもの"
-    command ln -snf ~/dotfiles/fisher ~/.config/fisher
-
     #Brewfile
     echo "Homebrew"
     command ln -snf ~/dotfiles/Brewfile ~/Brewfile
-
-    #starship
-    command ln -snf ~/dotfiles/starship.toml ~/.config/starship.toml
     
   else
     command echo "same install src dest"

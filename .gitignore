@@ -21,11 +21,17 @@
 !/.screenrc
 !/.screen/
 !/.tmux.conf
-# fish
-!/fish
-!/fisher
 # homebrew
 !/Brewfile
+## config
+!/.config/
+!/.config/**
+/.config/fcitx/**
+!/.config/fcitx/config
+!/.config/fcitx/conf/
+!/.config/fcitx/conf/**
+!/.config/environment.d/
+!/.config/environment.d/**
 # git
 !.gitconfig_shared
 #starship
@@ -36,9 +42,11 @@
 
 ###### ignore list ######
 *.swp
-fish/.DS_Store
-fish/functions/.DS_Store
-fisher/.DS_Store
+.config/.DS_Store
+.config/fish/.DS_Store
+.config/fish/functions/.DS_Store
+.config/fisher/.DS_Store
+/.config/TabNine/registration_key
 
 ###### final not ignore list ######
 !.gitignore
