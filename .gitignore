@@ -1,8 +1,6 @@
 ###### all ignore ######
 /*
-/.*
-/.*/*
-/.*/*/*
+/.**
 
 ###### not ignore list ######
 !/.bashrc
@@ -25,18 +23,21 @@
 !/.tmux.conf
 # fish
 !/fish
-fish/.DS_Store
-fish/functions/.DS_Store
 !/fisher
-fisher/.DS_Store
 # homebrew
 !/Brewfile
+# git
+!.gitconfig_shared
+
 # etc
 !/.gdbinit
 !/README.md
 
 ###### ignore list ######
 *.swp
+fish/.DS_Store
+fish/functions/.DS_Store
+fisher/.DS_Store
 
 ###### final not ignore list ######
 !.gitignore

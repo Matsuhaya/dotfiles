@@ -1,0 +1,14 @@
+[color]
+	ui = true
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	cm = commit
+[core]
+	editor = vim
+[credential]
+	helper = cache
+[ghq]
+	root = ~/go/src
+	root = ~/ghq
