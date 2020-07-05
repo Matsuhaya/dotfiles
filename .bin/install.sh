@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 set -ue
 
-helpmsg() {
-  command echo "Usage: $0 [--help | -h]" 0>&2
-  command echo ""
-}
-
 link_to_homedir() {
   command echo "backup old dotfiles..."
   if [ ! -d "$HOME/.dotbackup" ];then
@@ -18,6 +13,9 @@ link_to_homedir() {
   if [[ "$HOME" != "$dotdir" ]];then
     for f in $dotdir/.??*; do
       [[ `basename $f` == ".git" ]] && continue
+      [[ `basename $f` == ".bin" ]] && continue
+      [[ `basename $f` == ".gitignore" ]] && continue
+      
       # -L: ファイルがシンボリックリンクの時
       if [[ -L "$HOME/`basename $f`" ]];then
         command rm -f "$HOME/`basename $f`"
@@ -41,21 +39,6 @@ link_to_homedir() {
   fi
 }
 
-while [ $# -gt 0 ];do
-  case ${1} in
-    --debug|-d)
-      set -uex
-      ;;
-    --help|-h)
-      helpmsg
-      exit 1
-      ;;
-    *)
-      ;;
-  esac
-  shift
-done
-
 link_to_homedir
 git config --global include.path "~/.gitconfig_shared"
-command echo -e "\e[1;36m Install completed!!!! \e[m"
+command echo "Install completed!!!!"
