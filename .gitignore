@@ -28,7 +28,8 @@
 !/Brewfile
 # git
 !.gitconfig_shared
-
+#starship
+!starship.toml
 # etc
 !/.gdbinit
 !/README.md
