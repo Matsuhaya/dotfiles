@@ -29,6 +29,8 @@ fish/.DS_Store
 fish/functions/.DS_Store
 !/fisher
 fisher/.DS_Store
+# homebrew
+!/Brewfile
 # etc
 !/.gdbinit
 !/README.md

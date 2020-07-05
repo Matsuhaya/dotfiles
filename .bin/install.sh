@@ -15,7 +15,7 @@ link_to_homedir() {
       [[ `basename $f` == ".git" ]] && continue
       [[ `basename $f` == ".bin" ]] && continue
       [[ `basename $f` == ".gitignore" ]] && continue
-      
+
       # -L: ファイルがシンボリックリンクの時
       if [[ -L "$HOME/`basename $f`" ]];then
         command rm -f "$HOME/`basename $f`"
@@ -33,6 +33,10 @@ link_to_homedir() {
 
     echo "fishパッケージマネージャーfisherで管理されているもの"
     command ln -snf ~/dotfiles/fisher ~/.config/fisher
+
+    #Brewfile
+    echo "Homebrew"
+    command ln -snf ~/dotfiles/Brewfile ~/Brewfile
     
   else
     command echo "same install src dest"
